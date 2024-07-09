@@ -26,14 +26,23 @@
         padding: 10px;
         font-size: 30px;
     }
+    .header .contact
+    {
+            flex-grow: 1;
+            text-align: right;
+            background-color: white;
+            padding: 10px;
+            font-size: 30px;
+    }
     form 
     {
-        background: #f9f9f9;
+        background: rgba(245, 245, 245, 0.811);
         padding: 20px;
         border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        box-shadow: 0 0 10px black;
     }
-    input[type=text], input[type=email], select {
+    input[type=text], input[type=email], select
+    {
         width: 100%;
         padding: 10px;
         margin: 5px 0;
@@ -42,13 +51,19 @@
         border-radius: 4px;
         box-sizing: border-box;
     }
-    input[type=checkbox] {
+    input[type=checkbox]
+    {
         margin-right: 10px;
     }
-    
-    .footer {
+    .submit
+    {
         text-align: center;
-        margin-top: 20px;
+        padding: 10px;
+    }
+    .footer
+    {
+        text-align: center;
+        margin-top: 150px;
         font-size: 14px;
         color: #777;
     }
@@ -56,15 +71,15 @@
 <body>
     <div class="header">
         <img src="logo.jpg">
-        <div class="site"><a href="page2.html">ANIME</a></div>
-        <div><a href="page1.html" >CONTACT</a></div>
+        <div class="site"><a href="page1.html">ANIME</a></div>
+        <div class="contact"><a href="page2.html" >CONTACT</a></div>
 
     </div>
 
 <div>
     <p>Anime, a Japanese animation style, captivates global audiences with its unique art, diverse genres, and compelling storytelling.</p>
     <h2>Form</h2>
-    <form action="/submit-your-form-handler" method="post">
+        <form action = "javascript:submitForm()">
         <div>
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
@@ -83,20 +98,25 @@
                 <option value="Fantasy">Fantasy</option>
                 <option value="Suspense"> Suspense</option>
             </select>
+            <br><br>
         </div>
         <div>
             <input type="checkbox" id="newsletter" name="newsletter">
             <label for="newsletter">Subscribe to our newsletter via email</label>
         </div>
-        <div>
+        <div class="submit">
             <button type="submit">Submit</button>
         </div>
+        <script>
+            function submitForm() {
+        window.alert("Form Submitted")
+      }
+        </script>
     </form>
     
     <div class="footer">
         &copy; Anime. All rights reserved.
     </div>
 </div>
-
 </body>
 </html>
